@@ -1,13 +1,41 @@
 // 1: Write a function named printGreeting that prints a simple greeting message, the same one, every time it is called. Call this function 3 times.
+function printGreeting() {
+  console.log("Hello!");
+}
 
+printGreeting();
+printGreeting();
+printGreeting();
 
 // 2: Write a function that accepts 1 argument. The function should console.log a sentence that interpolates the data passed in.
+function goClimb(location) {
+  console.log(`Want go climbing ${location} today?`)
+}
 
+goClimb("in Boulder Canyon");
+goClimb("in Eldorado Canyon");
+goClimb("at Shelf Road");
 
-// 3: Write a function that has 3 parameters: a string and two numbers. The String will be the name of a company, and the numbers will represent the minimum and maximum of a pay range for a posted job. The function should print out a sentence that includes the name of the company and the range itself (if the numbers passed in are 90000 and 110000, the pay range is 20000).
+// 3: Write a function that has 3 parameters: a string and two numbers. The String will be the name of a company, and the numbers will represent the minimum and maximum of a pay range for a posted job.
+// The function should print out a sentence th0at includes the name of the company and the range itself (if the numbers passed in are 90000 and 110000, the pay range is 20000).
+function jobPosting(company, maxPay, minPay) {
+  console.log(`Come work for us at ${company}! There is a salary range of ${maxPay - minPay} for this job.`);
+}
 
+jobPosting("Yeti Bikes", 60000, 50000);
+jobPosting("Black Diamond", 90000, 55000);
+jobPosting("Never Summer", 45000, 30000);
 
 // 4: Write a function that satifies the following interaction pattern:
+function checkStock(qty, name) {
+  if (qty > 3) {
+    console.log(`${name} is stocked`);
+  } else if (qty <= 3, qty >= 1) {
+    console.log(`${name} - running LOW`);
+  } else if (qty < 1){
+    console.log(`${name} - OUT of stock!`);
+  }
+}
 
 checkStock(4, "Coffee");
 // => "Coffee is stocked"
